@@ -3,28 +3,22 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     :root{
-        --primary-color: #48577D;
-        --secondary-color: #7690CF;
-        --border-color: #9197A6;
-        --background-color-dark: #43464C;
-        --background-color-light: #9197A6;
-        --navbar-color: #343434;
-        --white-color: #ffffff;
-        --font-light-color: #a4acc4;
-        --font-dark-color: #313131;
-        -font-dark-color-2: #151515;
-
+        --light-blue-color: #B3CFF2;
+        --darker-blue-color: #899DD9;
+        --purple-color: #5F4A8C;
+        --brown-color-dark: #8C501B;
+        --brown-color-light: #BFB8A3;
     }
 
     *{
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Syne', sans-serif;
     }
 
     body{
-        background-color: var(--background-color-dark);
+        background-color: var(--light-blue-color);
         min-height: 100vh;
     }
 
