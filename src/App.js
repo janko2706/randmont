@@ -1,8 +1,7 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom';
 import styled from "styled-components";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 import SidebarMenu from "./components/SidebarMenu";
-import HomePage from "./pages/HomePage";
 
 
 
@@ -14,16 +13,8 @@ function App() {
 
       <MainContentStyled>
 
-        <Routes>
-          <Route path="/" element={<HomePage/>}/>
+        <AnimatedRoutes/>
 
-          <Route path="/about" element={<></>}/>
-
-          <Route path="/services" element={<></>}/>
-
-          <Route path="/contact" element={<></>}/>
-
-        </Routes>
       </MainContentStyled>
 
 

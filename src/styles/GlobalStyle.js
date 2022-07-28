@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body{
-        background-color: var(--light-blue-color);
+        background: var(--light-blue-color); 
         min-height: 100vh;
     }
 

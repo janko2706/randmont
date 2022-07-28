@@ -2,25 +2,26 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { HouseDoor, PeopleFill, PersonRolodex, EnvelopePlus } from 'react-bootstrap-icons';
-import logoWithCircle from '../images/Rand_Mont_Logo_NO_NAME_CIRCLE.png'
+import logoWithCircle from '../images/Rand_Mont_Logo_NO_NAME_CIRCLE.png';
+
 
 function SidebarMenu() {
-    
-    
 
     function openMenu () {
         let navigation = document.querySelector('.navigation');
-    var toggle = document.querySelector('.toggle');
+        var toggle = document.querySelector('.toggleNavigation');
+        var toggleObj = document.querySelector('.toggleObj');
     if (toggle != null) {
             navigation.classList.toggle('active');
+            toggleObj.classList.toggle('activeToggle')
     }
     }
-
-
-
 
     return (
     <SidebarMenuStyled>
+        <div  className='toggleObj'>
+            <div className='toggleNavigation' onClick={openMenu}></div>
+        </div>
         <div className='navigation'>
             <ul>
                 <li>
@@ -54,35 +55,55 @@ function SidebarMenu() {
                     </NavLink>
                 </li>
             </ul>
-            <div className='toggle' onClick={openMenu}></div>
         </div>
+        
     </SidebarMenuStyled>
     )
 }
 
 const SidebarMenuStyled = styled.div`
     .navigation{
-        z-index: 999;
+        z-index: 9;
         position: fixed;
-        inset: 20px;
-        background: var(--darker-blue-color);
+        top: 20px;
+        right: 20px;
+        left: 60px;
+        bottom: 20px;
+        backdrop-filter: blur(10px);
         width: 80px;
-        border-left: 10px solid var(--darker-blue-color);
         border-radius: 50px;
         overflow: hidden;
         box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.5);
         transition: 0.5s;
+        opacity: 0;
     }
     .navigation.active{
         width: 300px;
         border-radius: 20px;
+        opacity: 1;
     }
 
-    .navigation.active .toggle::before{
+    @media (max-width: 450px){
+        .navigation.active{
+            width: 180px;
+        }
+        .activeToggle .toggleNavigation{
+            transform: translateX(-20px) !important;
+        }
+        .toggleNavigation{
+            left: 1.7em !important;
+        }
+    }
+
+    .activeToggle .toggleNavigation::before{
         transform: translate(0px) rotate(-405deg);
     }
-    .navigation.active .toggle::after{
+    .activeToggle .toggleNavigation::after{
         transform: translate(0px) rotate(225deg);
+    }
+
+    .activeToggle .toggleNavigation{
+        transform: translateX(-60px);
     }
 
     .navigation ul{
@@ -95,44 +116,30 @@ const SidebarMenuStyled = styled.div`
     .navigation ul li {
         position: relative;
         list-style: none;
-        width: 100%;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
+        width: 0%;
+        border-radius: 30px;
+        /* border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px; */
+        background: none;
+        opacity: 1;
+        transition: .5s ease-in-out;
     }
-    .navigation ul li:hover {
-        background: white;
+    .navigation ul li:not(:first-child):hover {
+            width: 80%;
+            background: var(--light-blue-color);
+            opacity: .7;
+            
     }
 
     .navigation ul li:nth-child(1) {
         top: 20px;
+        font-weight: bold;
+        color: var(--darker-blue-color);
+        font-size: 1.5em;
         margin-bottom: 40px;
         background: none;
+        user-select: none;
     }
-
-    .navigation ul li:not(:first-child):hover::before{
-        content: '';
-        position: absolute;
-        top: -20px;
-        right: 0;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border-bottom-right-radius: 20px;
-        box-shadow: 7.5px 7.5px 0 7.5px white;
-    }
-    .navigation ul li:not(:first-child):hover::after{
-        content: '';
-        position: absolute;
-        bottom: -20px;
-        right: 0;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border-top-right-radius: 20px;
-        box-shadow: 7.5px -7.5px 0 7.5px white;
-    }
-
-
     .navigation ul li:hover:not(:first-child) .NavLink{
         color: var(--brown-color-dark);
     }
@@ -143,9 +150,11 @@ const SidebarMenuStyled = styled.div`
         width: 100%;
         display: flex;
         text-decoration: none;
-        color: var(--light-blue-color);
+        /* color: var(--light-blue-color); */
+        color: white;
 
     }
+
 
     .navigation ul li .NavLink .icon {
         position: relative;
@@ -173,21 +182,23 @@ const SidebarMenuStyled = styled.div`
         white-space: nowrap;
     }
 
-    .toggle{
+    .toggleNavigation{
+        z-index: 10;
         position: absolute;
-        bottom: 15px;
-        right: 15px;
+        top: 2em;
+        left: 4em;
         width: 50px;
         height: 50px;
-        background:#fff;
+        background: #fff;
         border-radius: 50%;
         box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
         cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 1s ease-in-out;
     }
-        .toggle::before{
+        .toggleNavigation::before{
             content: '';
             position: absolute;
             width: 26px;
@@ -197,7 +208,7 @@ const SidebarMenuStyled = styled.div`
             transform: translateY(-5px);
             transition: 1s;
         }
-        .toggle::after{
+        .toggleNavigation::after{
             content: '';
             position: absolute;
             width: 26px;
