@@ -95,6 +95,7 @@ const SidebarMenuStyled = styled.div`
         }
         .navigation ul li:nth-child(1) {
             font-size: 1.3rem !important;
+            color: black !important;
             transform: translateX(-50px);
 
         }
@@ -137,6 +138,11 @@ const SidebarMenuStyled = styled.div`
             background: var(--light-blue-color);
             opacity: .7;
             
+    }
+    @media (max-width: 949px){
+        .navigation ul li .NavLink{
+            color: black !important;
+        }
     }
 
     .navigation ul li:nth-child(1) {
@@ -192,7 +198,7 @@ const SidebarMenuStyled = styled.div`
 
     .toggleNavigation{
         z-index: 10;
-        position: absolute;
+        position: fixed;
         top: 2em;
         left: 4em;
         width: 50px;
