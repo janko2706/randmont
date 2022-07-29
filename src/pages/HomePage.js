@@ -79,7 +79,7 @@ const HomePageStyled = styled.div`
         border-style: none;
         vertical-align: middle;
         width: 100%;
-        height: 100%;
+        height: 100vh;
     }
     .headerTitleContDesktop{
         position: absolute;
