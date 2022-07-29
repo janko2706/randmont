@@ -16,7 +16,10 @@ function HomePage() {
             <HomePageStyled>
                 <header className='headerCont'>
                     <img src={headerImage} alt='alternate header' className='headerImage'/>
-                    <div className='headerTitleCont'>
+                    <div className='headerTitleContMobile'>
+                        <h1>More Brightness In <span style={{background: 'yellow', color: 'black'}}>Your Home</span></h1>
+                    </div>
+                    <div className='headerTitleContDesktop'>
                         <h1 className='headerH1'>
                             <span className='headerSpan'>More Brightness In</span>
                             <div className="message">
@@ -27,6 +30,7 @@ function HomePage() {
                         </h1>
                     </div>
                 </header>
+                
 
                 
                 <GlassCard/>
@@ -44,6 +48,21 @@ const HomePageStyled = styled.div`
         margin-right: auto;
     }
 
+    .headerTitleContMobile{
+        display: none;
+        position: absolute;
+        top: 75%;
+        /* left: 50%; */
+        transform: translate(0, -50%);
+        backdrop-filter: blur(10px);
+        font-size: .7em;
+        text-align: center;
+        width: 100%;
+        justify-content: flex-end;
+        user-select: none;
+        color: white;
+    }
+
     .headerImage{
         max-width: 100%;
         height: auto;
@@ -52,7 +71,7 @@ const HomePageStyled = styled.div`
         width: 100%;
         aspect-ratio: auto 1500/800;
     }
-    .headerTitleCont{
+    .headerTitleContDesktop{
         position: absolute;
         top: 50%;
         /* left: 50%; */
@@ -88,18 +107,15 @@ const HomePageStyled = styled.div`
         left: 550px;
         animation: openclose 7s ease-in-out infinite;
     }
-
-    @media (max-width: 450px){
-        .message{
-            font-size: .5rem !important;
+    @media (max-width: 949px){
+        .headerTitleContMobile{
+            display: flex;
         }
-        .headerSpan{
-            font-size: .5rem !important;
-        }
-        .headerTitleCont{
-            width: 70%;
+        .headerTitleContDesktop{
+            display: none;
         }
     }
+
     .word1, .word2, .word3 {
         font-family: tahoma;
     }

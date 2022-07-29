@@ -93,6 +93,14 @@ const SidebarMenuStyled = styled.div`
         .toggleNavigation{
             left: 1.7em !important;
         }
+        .navigation ul li:nth-child(1) {
+            font-size: 1.3rem !important;
+            transform: translateX(-50px);
+
+        }
+        .logo-icon{
+            display: none;
+        }
     }
 
     .activeToggle .toggleNavigation::before{
