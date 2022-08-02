@@ -156,7 +156,7 @@ const SidebarMenuStyled = styled.div`
     }
     @media (max-width: 949px){
         .navigation ul li .NavLink{
-            color: black !important;
+            color: white !important;
         }
     }
 
