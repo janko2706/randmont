@@ -5,7 +5,10 @@ function ServicesPage() {
 
     return (
         <ServicesPageStyled>
-            <div>services</div>
+            <div className='servicesPageCont'>
+
+
+            </div>
         </ServicesPageStyled>
     )
 }

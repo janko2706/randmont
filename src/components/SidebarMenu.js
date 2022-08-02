@@ -47,8 +47,8 @@ function SidebarMenu() {
                         <span className='icon'><PersonRolodex className={'b-icon'}/></span>
                         <span className='title'>Services</span>
                     </NavLink>
-                </li>
-                <li>
+                </li>         
+                    <li>
                     <NavLink to="/contact" className={'NavLink'}>
                         <span className='icon'><EnvelopePlus className={'b-icon'}/></span>
                         <span className='title'>Contact</span>
@@ -62,8 +62,14 @@ function SidebarMenu() {
 }
 
 const SidebarMenuStyled = styled.div`
+    .subElement{
+        display: block;
+        opacity: 0 !important;
+        text-decoration: none;
+        transition: all 1s ease-in-out;
+    }
     .navigation{
-        z-index: 9;
+        z-index: -10;
         position: fixed;
         top: 20px;
         right: 20px;
@@ -78,9 +84,17 @@ const SidebarMenuStyled = styled.div`
         opacity: 0;
     }
     .navigation.active{
+        z-index: 9;
         width: 300px;
         border-radius: 20px;
         opacity: 1;
+    }
+
+    .navigation ul li:nth-child(4):hover{
+        .subElement{
+            
+
+        }
     }
 
     @media (max-width: 450px){
@@ -137,6 +151,7 @@ const SidebarMenuStyled = styled.div`
             width: 80%;
             background: var(--light-blue-color);
             opacity: .7;
+            transition: all .5s ease-in-out;
             
     }
     @media (max-width: 949px){

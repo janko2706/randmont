@@ -1,27 +1,34 @@
 import React from 'react';
 import styled from 'styled-components';
 import GlassCard from '../components/GlassCard';
-import { motion } from 'framer-motion';
+import { motion, useTransform, useScroll } from 'framer-motion';
 import headerImageDesktop from '../images/homePageCoverWindow.jpeg';
-import headerImageMobile from '../images/homePageCoverMobile.jpeg'
+import headerImageMobile from '../images/homePageCoverMobile.jpeg';
+import aboutUsImage from '../images/RandMontCrew.jpg';
+import { NavLink } from 'react-router-dom';
 
 function HomePage() {
+
+    const { scrollY } = useScroll();
+    const y1 = useTransform(scrollY, [0, 300], [0, 100]);
+
+
     return (
         <motion.div
             // initial={{y: -200}}
-            animate={{x: 0}}
+            // animate={{x: 0}}
             //exit={{y: -200}}
-            transition={{ type: "spring", stiffness: 100 }}
-            style={{display: 'grid'}}
+            // transition={{ type: "spring", stiffness: 100 }}
+            style={{display: 'grid', overflowX: 'hidden'}}
         >
             <HomePageStyled>
                 <header className='headerCont'>
                     <img src={headerImageDesktop} alt='alternate header' className='headerImageDesktop'/>
                     <img src={headerImageMobile} alt='alternate header' className='headerImageMobile'/>
-                    <div className='headerTitleContMobile'>
+                    <motion.div className='headerTitleContMobile' style={{y: y1}}>
                         <h1>More Brightness In <span style={{background: 'yellow', color: 'black'}}>Your Home</span></h1>
-                    </div>
-                    <div className='headerTitleContDesktop'>
+                    </motion.div>
+                    <motion.div className='headerTitleContDesktop' style={{y: y1}}>
                         <h1 className='headerH1'>
                             <span className='headerSpan'>More Brightness In</span>
                             <div className="message">
@@ -30,18 +37,173 @@ function HomePage() {
                                 <div className="word3">Your Future</div>
                             </div>
                         </h1>
-                    </div>
+                    </motion.div>
                 </header>
-                
+                <section
+                    className={'aboutUsHomeSection'}
+                >   
+                    <div className="aboutUsHomeSectionTitleAndTextCont">
+                        <motion.div 
+                            initial={{x: -50, opacity: 0}}
+                            whileInView={{x: 0, opacity: 1}}
+                            transition={{duration: 1, type: "spring", stiffness: 300}}
+                            viewport={{once: true}}
+                            className='aboutUsHomeSectionTitleCont'>
+                            <h2>Who Are We?</h2>
+                        </motion.div>
+                        <motion.div
+                            initial={{x: -50, opacity: 0}}
+                            whileInView={{x: 0, opacity: 1}}
+                            transition={{duration: 1, delay: 1, type: "spring", stiffness: 300}}
+                            viewport={{once: true}}
+                            className='aboutUsHomeSectionTextCont'>
+                            <span>Hello, <br/>
+                            Welcome to Rand Mont, so glad you're here!<br/>
+                            We are Dario and Roko, father-son duo from Crotia and founders of Rand Mont.<br/>
+                            Our journey has begun 2 years ago with nothing but goodwill and big hearts. 
+                            </span>
+                        </motion.div>
+                        <motion.div
+                            initial={{x: -50, opacity: 0}}
+                            whileInView={{x: 0, opacity: 1}}
+                            transition={{duration: 1, delay: 1, type: "spring", stiffness: 300}}
+                            viewport={{once: true}}
+                            className="buttonBox">
+                        <NavLink className="btn btn-one" to='/about'>
+                            <span>LEARN MORE</span>
+                        </NavLink>
+                        </motion.div>
+                    </div>
+                    <motion.img
+                        initial={{x: 50, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        transition={{duration: 1, delay: .7, type: "spring", stiffness: 300}}
+                        viewport={{once: true}}
+                        className="aboutUsImage"
+                        src={aboutUsImage}
+                        alt="alternate about us "
+                    />
 
-                
-                <GlassCard/>
+                    
+                </section>
+                <section> 
+                    <GlassCard/>
+                </section>
             </HomePageStyled>
         </motion.div>
     )
 }
 
 const HomePageStyled = styled.div`
+
+    /* 
+    ========================
+        BUTTON LEARN MORE
+    ========================
+    */
+    .buttonBox{
+        margin: auto;
+    }
+    .btn {
+        overflow: hidden;
+        line-height: 50px;
+        height: 100px;
+        text-align: center;
+        width: 350px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 1em;
+        cursor: pointer;
+    }
+
+    .btn-one {
+        text-decoration: none;
+        color: #FFF;
+        transition: all 0.3s;
+        position: relative;
+    }
+    .btn-one span {
+    transition: all 0.3s;
+    }
+    .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+    transform: scale(0.1, 1);
+    }
+    .btn-one:hover span {
+    letter-spacing: 2px;
+    }
+    .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+    }
+    .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: var(--darker-blue-color);
+    opacity: .3;
+    }
+    .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+    }
+    //button END
+
+    .aboutUsHomeSection{
+        display: inline-flex; 
+        margin: 2em 5em  5em 0;
+    }
+
+    .aboutUsHomeSectionTitleAndTextCont{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutUsHomeSectionTextCont{
+        margin: auto;
+        padding-top: .6em; 
+        text-align: center;
+    }
+    .aboutUsHomeSectionTextCont::first-line {
+        font-size: 1.7em;
+        background: var(--darker-blue-color);
+        letter-spacing: 3px;
+    }
+    .aboutUsImage {
+        width: 70%;
+        aspect-ratio: 1330 / 635;
+    }
+    .aboutUsHomeSectionTitleCont{
+        margin-bottom: .7em;
+        margin-top: .7em;
+        font-size: 1.3em;
+    }
+    .aboutUsHomeSectionTitleCont::after{
+        content: '';
+        position: absolute;
+        z-index: 999;
+        width: 100px;
+        height: 100px;
+    }
     .headerCont{
         position: relative;
         display: block;
@@ -54,13 +216,15 @@ const HomePageStyled = styled.div`
         display: none;
         position: absolute;
         top: 60%;
-        /* left: 50%; */
+        padding: 5px;
         transform: translate(0, -50%);
         backdrop-filter: blur(10px);
         font-size: .7em;
-        text-align: center;
+        max-width: 100vw;
         width: 100%;
-        justify-content: flex-end;
+        text-align: center;
+        word-break: break-word;
+        margin-right: 1em;
         user-select: none;
         color: white;
     }
@@ -71,6 +235,7 @@ const HomePageStyled = styled.div`
         border-style: none;
         vertical-align: middle;
         width: 100%;
+        height: 100vh;
         aspect-ratio: auto 1500/800;
     }
     .headerImageMobile{
@@ -107,11 +272,11 @@ const HomePageStyled = styled.div`
         /* margin-left: 40px; */
     }
     .message{
-        background-color: yellow;
+        background-color: var(--light-blue-color);
+        overflow: hidden;
         color: #333;
         display: block;
         font-weight: 900;
-        overflow: hidden;
         position: absolute;
         top: 0.2rem;
         left: 550px;
@@ -121,6 +286,9 @@ const HomePageStyled = styled.div`
         .headerTitleContMobile{
             display: flex;
         }
+        .servicesHomeSection{
+            flex-direction:column ;
+        }
         .headerTitleContDesktop{
             display: none;
         }
@@ -129,6 +297,17 @@ const HomePageStyled = styled.div`
         }
         .headerImageDesktop{
             display: none !important;
+        }
+        .aboutUsHomeSectionTextCont{
+            font-size: .9em;
+            margin: .4em;
+        }
+        .aboutUsHomeSection{
+            flex-direction: column;
+            width: 100vw;
+        }
+        .aboutUsImage{
+            display: none;
         }
     }
 
