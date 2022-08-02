@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Facebook, Whatsapp, Instagram } from 'react-bootstrap-icons'
+import { Facebook, Whatsapp, Instagram } from 'react-bootstrap-icons';
 
 
 function Footer() {
@@ -11,19 +11,19 @@ function Footer() {
             <h3>RandMont</h3>
             <p>We are here to bring all the brightness you will ever need.</p>
             <ul class="socials">
-                <li><a href="#"><Facebook/></a></li>
-                <li><a href="#"><Whatsapp/></a></li>
-                <li><a href="#"><Instagram/></a></li>
+                <li><a href="/contact"><Facebook/></a></li>
+                <li><a href="/contact"><Whatsapp/></a></li>
+                <li><a href="/contact"><Instagram/></a></li>
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>copyright &copy;2022 <a href="#">RandMont</a>  </p>
+            <p>copyright &copy;2022 <a href="/">RandMont</a>  </p>
                     <div class="footer-menu">
                         <ul class="f-menu">
-                            <li><a href="">Home</a></li>
-                            <li><a href="">About</a></li>
-                            <li><a href="">Contact</a></li>
-                            <li><a href="">Services</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/aboutus">About</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/services">Services</a></li>
                         </ul>
                     </div>
         </div>
