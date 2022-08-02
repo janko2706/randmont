@@ -300,7 +300,7 @@ const HomePageStyled = styled.div`
         }
         .aboutUsHomeSectionTextCont{
             font-size: .9em;
-            margin: .4em;
+            margin: 1.5em;
         }
         .aboutUsHomeSection{
             flex-direction: column;
