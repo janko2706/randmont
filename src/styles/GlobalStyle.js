@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         background: var(--light-blue-color); 
         min-height: 100vh;
+        max-width: 100%;
     }
 
 `;

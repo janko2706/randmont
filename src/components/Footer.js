@@ -7,19 +7,19 @@ function Footer() {
     return (
         <FooterStyled>
         <footer>
-        <div class="footer-content">
-            <h3>RandMont</h3>
+        <div className="footer-content">
+            <h3>Rand Mont</h3>
             <p>We are here to bring all the brightness you will ever need.</p>
-            <ul class="socials">
+            <ul className="socials">
                 <li><a href="/contact"><Facebook/></a></li>
                 <li><a href="/contact"><Whatsapp/></a></li>
                 <li><a href="/contact"><Instagram/></a></li>
             </ul>
         </div>
-        <div class="footer-bottom">
-            <p>copyright &copy;2022 <a href="/">RandMont</a>  </p>
-                    <div class="footer-menu">
-                        <ul class="f-menu">
+        <div className="footer-bottom">
+            <p>copyright &copy;2022 <a href="/">Rand Mont</a>  </p>
+                    <div className="footer-menu">
+                        <ul className="f-menu">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/contact">Contact</a></li>

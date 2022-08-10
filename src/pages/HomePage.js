@@ -6,6 +6,7 @@ import headerImageDesktop from '../images/homePageCoverWindow.jpeg';
 import headerImageMobile from '../images/homePageCoverMobile.jpeg';
 import aboutUsImage from '../images/RandMontCrew.jpg';
 import { NavLink } from 'react-router-dom';
+import Impressions from '../components/Impressions';
 
 function HomePage() {
 
@@ -26,7 +27,7 @@ function HomePage() {
                     <img src={headerImageDesktop} alt='alternate header' className='headerImageDesktop'/>
                     <img src={headerImageMobile} alt='alternate header' className='headerImageMobile'/>
                     <motion.div className='headerTitleContMobile' style={{y: y1}}>
-                        <h1>More Brightness In <span style={{background: 'yellow', color: 'black'}}>Your Home</span></h1>
+                        <h1>More Brightness In <span style={{background: 'var(--light-blue-color)', color: 'black'}}>Your Home</span></h1>
                     </motion.div>
                     <motion.div className='headerTitleContDesktop' style={{y: y1}}>
                         <h1 className='headerH1'>
@@ -44,18 +45,10 @@ function HomePage() {
                 >   
                     <div className="aboutUsHomeSectionTitleAndTextCont">
                         <motion.div 
-                            initial={{x: -50, opacity: 0}}
-                            whileInView={{x: 0, opacity: 1}}
-                            transition={{duration: 1, type: "spring", stiffness: 300}}
-                            viewport={{once: true}}
                             className='aboutUsHomeSectionTitleCont'>
                             <h2>Who Are We?</h2>
                         </motion.div>
                         <motion.div
-                            initial={{x: -50, opacity: 0}}
-                            whileInView={{x: 0, opacity: 1}}
-                            transition={{duration: 1, delay: 1, type: "spring", stiffness: 300}}
-                            viewport={{once: true}}
                             className='aboutUsHomeSectionTextCont'>
                             <span>Hello, <br/>
                             Welcome to Rand Mont, so glad you're here!<br/>
@@ -64,10 +57,6 @@ function HomePage() {
                             </span>
                         </motion.div>
                         <motion.div
-                            initial={{x: -50, opacity: 0}}
-                            whileInView={{x: 0, opacity: 1}}
-                            transition={{duration: 1, delay: 1, type: "spring", stiffness: 300}}
-                            viewport={{once: true}}
                             className="buttonBox">
                         <NavLink className="btn btn-one" to='/about'>
                             <span>LEARN MORE</span>
@@ -75,10 +64,6 @@ function HomePage() {
                         </motion.div>
                     </div>
                     <motion.img
-                        initial={{x: 50, opacity: 0}}
-                        whileInView={{x: 0, opacity: 1}}
-                        transition={{duration: 1, delay: .7, type: "spring", stiffness: 300}}
-                        viewport={{once: true}}
                         className="aboutUsImage"
                         src={aboutUsImage}
                         alt="alternate about us "
@@ -88,6 +73,17 @@ function HomePage() {
                 </section>
                 <section> 
                     <GlassCard/>
+                </section>
+                <section>
+                    <Impressions/>
+                </section>
+                <section>
+                    <h1 className='text-center workTogether'>Contact us today, and let's start working together!</h1>
+                    <div className='buttonBox2'> 
+                        <NavLink className="btn btn-one" to='/contact'>
+                            <span>CONTACT US</span>
+                        </NavLink>
+                    </div>
                 </section>
             </HomePageStyled>
         </motion.div>
@@ -101,6 +97,10 @@ const HomePageStyled = styled.div`
         BUTTON LEARN MORE
     ========================
     */
+    .buttonBox2{
+        text-align:center ;
+        margin: 10px;
+    }
     .buttonBox{
         margin: auto;
     }
@@ -221,7 +221,7 @@ const HomePageStyled = styled.div`
         backdrop-filter: blur(10px);
         font-size: .7em;
         max-width: 100vw;
-        width: 100%;
+        width: fit-content;
         text-align: center;
         word-break: break-word;
         margin-right: 1em;
@@ -308,6 +308,13 @@ const HomePageStyled = styled.div`
         }
         .aboutUsImage{
             display: none;
+        }
+        .workTogether{
+            text-align: left !important;
+            margin-right: 40%;
+        }
+        .buttonBox2{
+            text-align: left !important;
         }
     }
 

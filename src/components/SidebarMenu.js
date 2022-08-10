@@ -27,7 +27,7 @@ function SidebarMenu() {
                 <li>
                     <NavLink to="/" className={'NavLink'}>
                         <span className='icon'><img src={logoWithCircle} alt='testing alternative' className={'logo-icon'}/></span>
-                        <span className='title'>RAND MONT</span>
+                        <span className='title randMontTitle'>RAND MONT</span>
                     </NavLink>
                 </li>
                 <li>
@@ -112,6 +112,10 @@ const SidebarMenuStyled = styled.div`
             color: black !important;
             transform: translateX(-50px);
 
+        }
+        .randMontTitle{
+            position: absolute !important;
+            left: 18px;
         }
         .logo-icon{
             display: none;
