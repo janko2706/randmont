@@ -27,7 +27,7 @@ function HomePage() {
                     <img src={headerImageDesktop} alt='alternate header' className='headerImageDesktop'/>
                     <img src={headerImageMobile} alt='alternate header' className='headerImageMobile'/>
                     <motion.div className='headerTitleContMobile' style={{y: y1}}>
-                        <h1>More Brightness In <span style={{background: 'var(--light-blue-color)', color: 'black'}}>Your Home</span></h1>
+                        <h3 style={{color:'white'}}>More Brightness In <span style={{background: 'var(--light-blue-color)', color: 'black'}}>Your Home</span></h3>
                     </motion.div>
                     <motion.div className='headerTitleContDesktop' style={{y: y1}}>
                         <h1 className='headerH1'>
@@ -107,9 +107,7 @@ const HomePageStyled = styled.div`
     .btn {
         overflow: hidden;
         line-height: 50px;
-        height: 100px;
         text-align: center;
-        width: 350px;
         text-decoration: none;
         font-size: 1.2rem;
         padding: 1em;
@@ -219,7 +217,8 @@ const HomePageStyled = styled.div`
         padding: 5px;
         transform: translate(0, -50%);
         backdrop-filter: blur(10px);
-        font-size: .7em;
+        font-size: .7em  !important;
+        line-height: 0px !important;
         max-width: 100vw;
         width: fit-content;
         text-align: center;
@@ -261,6 +260,7 @@ const HomePageStyled = styled.div`
         font-size: 3rem;
         font-weight: 100;
         line-height: 1.5;
+        margin: 0px !important;
         text-transform: uppercase;
         white-space: nowrap;
         overflow: hidden;

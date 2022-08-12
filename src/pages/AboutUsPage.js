@@ -41,22 +41,27 @@ function AboutUsPage() {
 const AboutUsPageStyled = styled.div`
     background: var(--light-color-blue);
     .ourProcessSection{
+        margin-top: 10px;
         display: grid;
         grid-template-columns: auto auto auto auto;
         grid-template-rows: auto auto;
         height: auto;
         width: 100%;
         background-attachment: fixed;
-        background-image: url('https://img.freepik.com/free-photo/construction-site-silhouettes_1127-2990.jpg?w=2000'); 
-        word-break: break-all;
-        vertical-align: middle;
+        background-image: url('https://img.freepik.com/free-photo/large-building-site_1127-3251.jpg?w=2000'); 
+        align-items: center;
         text-align: center;
-
     }
     .ourProcessSection div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
         height: 23vw;
         width: 24.5vw;
     }
+
+
     .consultationBlock, .installationBlock, .preconstructionMesurmantsBlock,.theFinishingTouchesBlock{
         background-color: var(--darker-blue-color);
     }
@@ -69,7 +74,7 @@ const AboutUsPageStyled = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url('https://img.freepik.com/free-photo/construction-site-silhouettes_1127-2990.jpg?w=2000'); 
+        background-image: url('https://img.freepik.com/free-photo/large-building-site_1127-3251.jpg?w=2000'); 
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -95,6 +100,12 @@ const AboutUsPageStyled = styled.div`
             font-size: 4rem;
         }
         
+    }
+    @media (max-width:985px){
+        .ourProcessSection div{
+            font-size: .8rem;
+            word-break: break-all;
+        }
     }
 
 `

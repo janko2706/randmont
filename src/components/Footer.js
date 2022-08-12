@@ -10,6 +10,7 @@ function Footer() {
         <div className="footer-content">
             <h3>Rand Mont</h3>
             <p>We are here to bring all the brightness you will ever need.</p>
+            {/* //TODO  add social media links*/}
             <ul className="socials">
                 <li><a href="/contact"><Facebook/></a></li>
                 <li><a href="/contact"><Whatsapp/></a></li>
