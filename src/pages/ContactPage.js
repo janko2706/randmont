@@ -85,7 +85,6 @@ function ContactPage() {
 }
 
 const ContactPageStyled = styled.div`
-height: 100vh;
 background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/ca/Koebenhavn_Oerstedsparken_2009_ubt.JPG');
 background-attachment: fixed;
 .container {
