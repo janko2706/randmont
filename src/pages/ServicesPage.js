@@ -28,7 +28,7 @@ function ServicesPage() {
                                         </ul>
                                     </p>
                                 </div>
-                                <a href='/contact' className="btn btn-primary">Free estimate</a>
+                                <a href='/newConstructionForm' className="btn btn-primary">Free estimate</a>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,7 @@ import ServicesPage from '../pages/ServicesPage';
 import AboutUsPage from '../pages/AboutUsPage';
 import ContactPage from '../pages/ContactPage';
 import RenovationForm from './RenovationForm';
+import NewConstructionForm from './NewConstructionForm';
 
 function AnimatedRoutes() {
     const location = useLocation();
@@ -23,7 +24,7 @@ function AnimatedRoutes() {
 
                 <Route path="/renovationForm" element={<RenovationForm/>}/>
                 
-                <Route path="/newConstructionForm" element={<ContactPage/>}/>
+                <Route path="/newConstructionForm" element={<NewConstructionForm/>}/>
             </Routes>
         </AnimatePresence>
     )
