@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import delivery from '../../svgs/delivery.png';
+import constructionDelivery from '../../svgs/constructionDelivery.png';
 
-const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
+const TipUsluge = ({ previousStep, nextStep, handleChange, values }) => {
     
     const Continue = e => {
         e.preventDefault();
@@ -13,28 +15,23 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
     }
 
     return ( 
-        <KolicinaProzoraStyled>
+        <TipUslugeStyled>
             <h1 className='text-center' style={{backdropFilter: 'blur(10px)'}}>Help us give you a better estimate!</h1>
-            <h3 className='optionsQuestion text-center'>How many windows should we expect?</h3>
+            <h3 className='optionsQuestion text-center'>What kind of service do you need?</h3>
 
             <form > 
-
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='0-10' id='0-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='0-10'>
-                            <div style={{fontSize: '3rem'}}> 0-10</div>
+                    <input type='radio' value='Only Delivery' id='OnlyDelivery' name='tipUsluge' onChange={handleChange('tipUsluge')} />
+                        <label htmlFor='OnlyDelivery'>
+                            <div> Only Delivery</div>
+                            <img className='startaStolarijaImages' src={delivery} alt='wood'/>
                         </label>
                 </div>
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='20-10' id='20-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='20-10'>
-                            <div style={{fontSize: '3rem'}}> 20-10</div>
-                        </label>
-                </div>
-                <div className='staraStolarijaOption'>
-                    <input type='radio' value='20+' id='20+' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='20+'>
-                            <div style={{fontSize: '3rem'}}> 20+</div>
+                    <input type='radio' value='Delivery & installation' id='Delivery&installation' name='tipUsluge' onChange={handleChange('tipUsluge')} />
+                        <label htmlFor='Delivery&installation'>
+                            <div> Delivery & installation</div>
+                            <img className='startaStolarijaImages' src={constructionDelivery} alt='wood'/>
                         </label>
                 </div>
                 <div className='stepsBtnCont'>
@@ -42,10 +39,10 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
                     <input onClick={ Continue } className='btn-75' value='next' type='button'/>
                 </div>
             </form>
-        </KolicinaProzoraStyled>
+        </TipUslugeStyled>
     )
 }
-const KolicinaProzoraStyled = styled.div`
+const TipUslugeStyled = styled.div`
     margin-left: 20px;
     margin-right: 20px;
     .optionsQuestion{
@@ -156,5 +153,5 @@ const KolicinaProzoraStyled = styled.div`
     }
 `
 
-export default KolicinaProzora
+export default TipUsluge
 

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
+
+const VelicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
     
     const Continue = e => {
         e.preventDefault();
@@ -11,30 +12,29 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
         e.preventDefault();
         previousStep();
     }
-
-    return ( 
-        <KolicinaProzoraStyled>
+    return (
+        <VelicinaProzoraStyled>
             <h1 className='text-center' style={{backdropFilter: 'blur(10px)'}}>Help us give you a better estimate!</h1>
-            <h3 className='optionsQuestion text-center'>How many windows should we expect?</h3>
+            <h3 className='optionsQuestion text-center'>How big will the windows be?</h3>
 
             <form > 
 
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='0-10' id='0-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
+                    <input type='radio' value='0-10' id='0-10' name='velicinaProzora' onChange={handleChange('velicinaProzora')} />
                         <label htmlFor='0-10'>
-                            <div style={{fontSize: '3rem'}}> 0-10</div>
+                            <div style={{fontSize: '2rem'}}> Big Windows</div>
                         </label>
                 </div>
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='20-10' id='20-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
+                    <input type='radio' value='20-10' id='20-10' name='velicinaProzora' onChange={handleChange('velicinaProzora')} />
                         <label htmlFor='20-10'>
-                            <div style={{fontSize: '3rem'}}> 20-10</div>
+                            <div style={{fontSize: '2rem'}}> Small Windows</div>
                         </label>
                 </div>
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='20+' id='20+' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
+                    <input type='radio' value='20+' id='20+' name='velicinaProzora' onChange={handleChange('velicinaProzora')} />
                         <label htmlFor='20+'>
-                            <div style={{fontSize: '3rem'}}> 20+</div>
+                            <div style={{fontSize: '2rem'}}> A Mix Of Both</div>
                         </label>
                 </div>
                 <div className='stepsBtnCont'>
@@ -42,10 +42,10 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
                     <input onClick={ Continue } className='btn-75' value='next' type='button'/>
                 </div>
             </form>
-        </KolicinaProzoraStyled>
+        </VelicinaProzoraStyled>
     )
 }
-const KolicinaProzoraStyled = styled.div`
+const VelicinaProzoraStyled = styled.div`
     margin-left: 20px;
     margin-right: 20px;
     .optionsQuestion{
@@ -156,5 +156,4 @@ const KolicinaProzoraStyled = styled.div`
     }
 `
 
-export default KolicinaProzora
-
+export default VelicinaProzora

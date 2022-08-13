@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import woodIcon from '../../svgs/wood.png';
 import aluminumIcon from '../../svgs/aluminiumPng.png';
-import pvcIcon from '../../svgs/pvc.png'
+import pvcIcon from '../../svgs/pvc.png';
 
 const StaraStolarija = ({ nextStep, handleChange, values }) => {
 
@@ -20,7 +20,7 @@ const StaraStolarija = ({ nextStep, handleChange, values }) => {
             <form> 
 
                 <div className='staraStolarijaOption'>
-                    <input type='checkbox' value='PVC' id='PVC' name='staraStolarija' onChange={handleChange('staraStolarija')} />
+                    <input type='checkbox' value='PVC' id='PVC' name='staraStolarija' onChange={handleChange('staraStolarija')}/>
                         <label htmlFor='PVC'>
                             <div> PVC</div>
                             <img className='startaStolarijaImages' src={pvcIcon} alt='PVC'/>
@@ -137,30 +137,21 @@ const StaraStolarijaStyled = styled.div`
     .btn-75 {
         -webkit-tap-highlight-color: transparent;
         -webkit-appearance: button;
-        background-color: #000;
-        background-image: none;
-        color: #fff;
         cursor: pointer;
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-            Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
-            Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        font-family: ui-sans-serif;
         font-size: 100%;
         line-height: 1.5;
         margin: 0;
-        mask-image: -webkit-radial-gradient(#000, #fff);
-        padding: 0;
     }
     .btn-75 {
-        background: #e0e5ec;
+        background: var(--light-blue-color);
         border-radius: 999px;
-        box-shadow: inset 2px 2px 2px 0 hsla(0, 0%, 100%, 0.5),
-            7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
         box-sizing: border-box;
         color: #000;
         display: block;
         font-weight: 900;
         overflow: hidden;
-        padding: 1.2rem 3rem;
+        padding: 1rem 2rem;
         position: relative;
         text-transform: uppercase;
     }

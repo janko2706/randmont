@@ -74,7 +74,7 @@ function HomePage() {
                 <section> 
                     <GlassCard/>
                 </section>
-                <section>
+                <section id='testimonials'>
                     <Impressions/>
                 </section>
                 <section>

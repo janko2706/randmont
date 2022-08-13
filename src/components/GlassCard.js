@@ -16,7 +16,8 @@ function GlassCard() {
                     <div className="content">
                     <h2>Renovation</h2>
                     <p>Let's Give Your Home A Fresh Look.</p>
-                    <a href="/renovation">Read More</a>
+                    <a href="/services">Read More</a>
+                    <a href="/services#renovation">Get a free estimate</a>
                     </div>
                 </div>
                 <div className="box">
@@ -24,7 +25,8 @@ function GlassCard() {
                     <div className="content">
                     <h2>New Construction</h2>
                     <p>Let's Make Your Dream Home A Reality.</p>
-                    <a href="/newConstruction">Read More</a>
+                    <a href="/services">Read More</a>
+                    <a href="/services#renovation">Get a free estimate</a>
                     </div>
                 </div>
                 <div className="box">
@@ -33,7 +35,8 @@ function GlassCard() {
                     <h2>Big Projects</h2>
                     <p>Even When It Comes To Big Projects,</p>
                     <p>We Put Our Heart And Soul In Every Scheme.</p>
-                    <a href="/bigProjects">Read More</a>
+                    <a href="/services">Read More</a>
+                    <a href="/contact">Give us a call</a>
                     </div>
                 </div>
             </div>

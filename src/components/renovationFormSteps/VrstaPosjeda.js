@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import commercialBuilding from '../../svgs/commercialBuilding.png';
+import privateProperty from '../../svgs/privateProperty.png';
 
-const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
+const VrstaPosjeda = ({ previousStep, nextStep, handleChange, values }) => {
     
     const Continue = e => {
         e.preventDefault();
@@ -13,28 +15,24 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
     }
 
     return ( 
-        <KolicinaProzoraStyled>
+        <VrstaPosjedaStyled>
             <h1 className='text-center' style={{backdropFilter: 'blur(10px)'}}>Help us give you a better estimate!</h1>
-            <h3 className='optionsQuestion text-center'>How many windows should we expect?</h3>
+            <h3 className='optionsQuestion text-center'>What kind of property are we talking about?</h3>
 
             <form > 
 
-                <div className='staraStolarijaOption'>
-                    <input type='radio' value='0-10' id='0-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='0-10'>
-                            <div style={{fontSize: '3rem'}}> 0-10</div>
+            <div className='staraStolarijaOption'>
+                    <input type='radio' value='Commercial Building' id='CommercialBuilding' name='vrstaPosjeda' onChange={handleChange('vrstaPosjeda')}/>
+                        <label htmlFor='CommercialBuilding'>
+                            <div> Commercial Building</div>
+                            <img className='startaStolarijaImages' src={commercialBuilding} alt='PVC'/>
                         </label>
                 </div>
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='20-10' id='20-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='20-10'>
-                            <div style={{fontSize: '3rem'}}> 20-10</div>
-                        </label>
-                </div>
-                <div className='staraStolarijaOption'>
-                    <input type='radio' value='20+' id='20+' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='20+'>
-                            <div style={{fontSize: '3rem'}}> 20+</div>
+                    <input type='radio' value='Private Property' id='PrivateProperty' name='vrstaPosjeda' onChange={handleChange('vrstaPosjeda')} />
+                        <label htmlFor='PrivateProperty'>
+                            <div> Private Property</div>
+                            <img className='startaStolarijaImages' src={privateProperty} alt='wood'/>
                         </label>
                 </div>
                 <div className='stepsBtnCont'>
@@ -42,10 +40,10 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
                     <input onClick={ Continue } className='btn-75' value='next' type='button'/>
                 </div>
             </form>
-        </KolicinaProzoraStyled>
+        </VrstaPosjedaStyled>
     )
 }
-const KolicinaProzoraStyled = styled.div`
+const VrstaPosjedaStyled = styled.div`
     margin-left: 20px;
     margin-right: 20px;
     .optionsQuestion{
@@ -156,5 +154,5 @@ const KolicinaProzoraStyled = styled.div`
     }
 `
 
-export default KolicinaProzora
+export default VrstaPosjeda
 

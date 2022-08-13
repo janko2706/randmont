@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
+const RoleteRenovation = ({ previousStep, nextStep, handleChange, values }) => {
     
     const Continue = e => {
         e.preventDefault();
@@ -13,28 +13,22 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
     }
 
     return ( 
-        <KolicinaProzoraStyled>
+        <RoleteRenovationStyled>
             <h1 className='text-center' style={{backdropFilter: 'blur(10px)'}}>Help us give you a better estimate!</h1>
-            <h3 className='optionsQuestion text-center'>How many windows should we expect?</h3>
+            <h3 className='optionsQuestion text-center'>Will you need blinds?</h3>
 
             <form > 
 
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='0-10' id='0-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='0-10'>
-                            <div style={{fontSize: '3rem'}}> 0-10</div>
+                    <input type='radio' value='No' id='No' name='rolete' onChange={handleChange('rolete')} />
+                        <label htmlFor='No'>
+                            <div style={{fontSize: '3rem'}}> No</div>
                         </label>
                 </div>
                 <div className='staraStolarijaOption'>
-                    <input type='radio' value='20-10' id='20-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='20-10'>
-                            <div style={{fontSize: '3rem'}}> 20-10</div>
-                        </label>
-                </div>
-                <div className='staraStolarijaOption'>
-                    <input type='radio' value='20+' id='20+' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
-                        <label htmlFor='20+'>
-                            <div style={{fontSize: '3rem'}}> 20+</div>
+                    <input type='radio' value='Yes' id='Yes' name='rolete' onChange={handleChange('rolete')} />
+                        <label htmlFor='Yes'>
+                            <div style={{fontSize: '3rem'}}> Yes</div>
                         </label>
                 </div>
                 <div className='stepsBtnCont'>
@@ -42,10 +36,10 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
                     <input onClick={ Continue } className='btn-75' value='next' type='button'/>
                 </div>
             </form>
-        </KolicinaProzoraStyled>
+        </RoleteRenovationStyled>
     )
 }
-const KolicinaProzoraStyled = styled.div`
+const RoleteRenovationStyled = styled.div`
     margin-left: 20px;
     margin-right: 20px;
     .optionsQuestion{
@@ -156,5 +150,5 @@ const KolicinaProzoraStyled = styled.div`
     }
 `
 
-export default KolicinaProzora
+export default RoleteRenovation
 

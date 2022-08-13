@@ -24,7 +24,7 @@ function App() {
 }
 
 const MainContentStyled = styled.main`
-  //TO-DO
+// TODO
 `;
 
 export default App;

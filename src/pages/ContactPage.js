@@ -1,7 +1,6 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
-import RenovationForm from '../components/RenovationForm';
 
 function ContactPage() {
   const form = useRef();
@@ -24,7 +23,7 @@ function ContactPage() {
 
       {/* <!-- COMPANY INFORMATION --> */}
       <div className="company-info">
-        <h3>Rand Mont</h3>
+        <h3 className='text-center'>Rand Mont</h3>
         <ul>
           <li><i className="fa fa-flag"></i>  Munchen, Zagreb</li>
           <li><i className="fa fa-road"></i>  Perkovceva 62, Samobor 10430, Croatia</li>
