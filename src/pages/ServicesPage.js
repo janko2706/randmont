@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import newConstructionImage from '../svgs/newConstructionImae.png';
 import renovationImage from '../svgs/renovationImage.png';
 import bigProjectsImage from '../svgs/bigProjectsImage.png';
-import servicesBg from '../images/slider-services-background.jpg'
+import servicesBg from '../images/slider-services-background.jpg';
+import { NavLink } from 'react-router-dom';
 
 function ServicesPage() {
 
@@ -28,7 +29,7 @@ function ServicesPage() {
                                         </ul>
                                     </p>
                                 </div>
-                                <a href='/newConstructionForm' className="btn btn-primary">Free estimate</a>
+                                <NavLink to='/newconstructionform' className="btn btn-primary">Free estimate</NavLink>
                             </div>
                         </div>
                     </div>
@@ -46,7 +47,7 @@ function ServicesPage() {
                                         </ul>
                                     </p>
                                 </div>
-                                <a href='/renovationForm' className="btn btn-primary">Free estimate</a>
+                                <NavLink to='/renovationform' className="btn btn-primary">Free estimate</NavLink>
                             </div>
                         </div>
                     </div>
@@ -64,7 +65,7 @@ function ServicesPage() {
                                         </ul>
                                     </p>
                                 </div>
-                                <a href='/contact' className="btn btn-primary">Contact</a>
+                                <NavLink to='/contact' className="btn btn-primary">Contact</NavLink>
                             </div>
                         </div>
                     </div>
