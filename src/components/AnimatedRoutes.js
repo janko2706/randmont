@@ -22,9 +22,9 @@ function AnimatedRoutes() {
 
                 <Route path="/contact" element={<ContactPage/>}/>
 
-                <Route path="/renovationForm" element={<RenovationForm/>}/>
+                <Route path="/renovationform" element={<RenovationForm/>}/>
                 
-                <Route path="/newConstructionForm" element={<NewConstructionForm/>}/>
+                <Route path="/newconstructionform" element={<NewConstructionForm/>}/>
             </Routes>
         </AnimatePresence>
     )
