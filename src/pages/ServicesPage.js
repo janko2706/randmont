@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import newConstructionImage from '../svgs/newConstructionImae.png';
 import renovationImage from '../svgs/renovationImage.png';
 import bigProjectsImage from '../svgs/bigProjectsImage.png';
-import servicesBg from '../images/servicesWindowBg.jpeg'
+import servicesBg from '../images/slider-services-background.jpg'
 
 function ServicesPage() {
 
