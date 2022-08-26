@@ -25,31 +25,31 @@ function SidebarMenu() {
         <div className='navigation'>
             <ul>
                 <li>
-                    <NavLink to="/" className={'NavLink'}>
+                    <NavLink to="/" className={'NavLink'} onClick={openMenu}>
                         <span className='icon'><img src={logoWithCircle} alt='testing alternative' className={'logo-icon'}/></span>
                         <span className='title randMontTitle'>RAND MONT</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/" className={'NavLink'}>
+                    <NavLink to="/" className={'NavLink'} onClick={openMenu}>
                         <span className='icon'><HouseDoor className={'b-icon'}/></span>
                         <span className='title'>Home</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" className={'NavLink'}>
+                    <NavLink to="/about" className={'NavLink'} onClick={openMenu}>
                         <span className='icon'><PeopleFill className={'b-icon'}/></span>
                         <span className='title'>About</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/services" className={'NavLink'}>
+                    <NavLink to="/services" className={'NavLink'} onClick={openMenu}>
                         <span className='icon'><PersonRolodex className={'b-icon'}/></span>
                         <span className='title'>Services</span>
                     </NavLink>
                 </li>         
                     <li>
-                    <NavLink to="/contact" className={'NavLink'}>
+                    <NavLink to="/contact" className={'NavLink'} onClick={openMenu}>
                         <span className='icon'><EnvelopePlus className={'b-icon'}/></span>
                         <span className='title'>Contact</span>
                     </NavLink>
@@ -88,13 +88,6 @@ const SidebarMenuStyled = styled.div`
         width: 300px;
         border-radius: 20px;
         opacity: 1;
-    }
-
-    .navigation ul li:nth-child(4):hover{
-        .subElement{
-            
-
-        }
     }
 
     @media (max-width: 450px){

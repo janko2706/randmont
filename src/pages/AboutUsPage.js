@@ -1,5 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import discussImage from '../images/Discussing.png';
+import plantImage from '../images/plant.png';
+import blueprintImage from '../images/blueprint.png';
+import installImage from '../images/install.png';
+
+
 
 function AboutUsPage() {
     return (
@@ -47,10 +53,9 @@ const AboutUsPageStyled = styled.div`
         grid-template-rows: auto auto;
         height: auto;
         width: 100%;
-        background-attachment: fixed;
-        background-image: url('https://img.freepik.com/free-photo/large-building-site_1127-3251.jpg?w=2000'); 
         align-items: center;
         text-align: center;
+        overflow: hidden;
     }
     .ourProcessSection div{
         display: flex;
@@ -58,12 +63,24 @@ const AboutUsPageStyled = styled.div`
         justify-content: center;
         font-size: 2rem;
         height: 23vw;
-        width: 24.5vw;
+        width: 24.7vw;
+    }
+    .emptyBlock1{
+        background-image: url('${discussImage}');
+        background-size: cover;
+    } .emptyBlock2{
+        background-image: url('${plantImage}');
+        background-size: cover;
+    } .emptyBlock3{
+        background-image: url('${blueprintImage}');
+        background-size: cover;
+    } .emptyBlock4{
+        background-image: url('${installImage}');
+        background-size: cover;
     }
 
-
     .consultationBlock, .installationBlock, .preconstructionMesurmantsBlock,.theFinishingTouchesBlock{
-        background-color: var(--darker-blue-color);
+        background-color: var(--light-blue-color);
     }
 
 
