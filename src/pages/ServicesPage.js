@@ -72,7 +72,7 @@ function ServicesPage() {
                 </div>
                 <div className="ft">
                     <p className="chk"><small className="text-muted">Still not sure?</small></p>
-                    <a href='/contact' className="btn btn-primary">Contact us with any questions.</a>
+                    <NavLink to='/contact' className="btn btn-primary">Contact us with any questions.</NavLink>
                 </div>
             </div>
         </ServicesPageStyled>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import discussImage from '../images/Discussing.png';
 import plantImage from '../images/plant.png';
 import blueprintImage from '../images/blueprint.png';
@@ -12,8 +13,25 @@ function AboutUsPage() {
         <AboutUsPageStyled>
             <div className='aboutUsPageTitleCont'>
                 <h1 className='aboutUsPageTitle'>RAND MONT</h1>
+                <motion.div
+                    animate={{
+                        scale: [1, 2, 2, 1, 1],
+                        rotate: [0, 0, 270, 270, 0],
+                        borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+                    }} 
+                    className='lineUnderAboutUsPageTitle'
+                    transition={{
+                        duration: 2,
+                        ease: "easeInOut",
+                        times: [0, 0.2, 0.5, 0.8, 1],
+                        repeat: Infinity,
+                        repeatDelay: 1
+                    }}
+                    >
+                        asdf
+                </motion.div>
             </div>
-            <div className='text-center text-bold'>
+            <div className='text-center text-bold m-3'>
                 <p className='m-0' style={{fontSize: '2rem', paddingTop: '1em'}}>Hello.</p>
                 <p className='m-0'>Welcome to Rand Mont, so glad you're here!</p>
                 <p className='m-0'>We are Dario and Roko, father-son duo from Crotia and founders of Rand Mont.</p>
@@ -21,7 +39,7 @@ function AboutUsPage() {
                 <p className='m-0'>Today, our company has 12 amazing people who put their heart and soul into every project we do.</p>
                 <p className='m-0'>Separated into 3 teams, we have finished about 50 projects and continue to do more. Our mission is to create more beautiful and energy-conservative homes.</p>
             </div>
-            <div className='m-3 text-center'><h1>Our Process</h1></div>
+            <div className='m-3 text-center pt-5 pb-2'><h1>Our Process</h1></div>
             <div className='ourProcessSection'>
                     <div className='consultationBlock'>
                         On-Site Consultations
@@ -78,28 +96,28 @@ const AboutUsPageStyled = styled.div`
         background-image: url('${installImage}');
         background-size: cover;
     }
-
+    
     .consultationBlock, .installationBlock, .preconstructionMesurmantsBlock,.theFinishingTouchesBlock{
         background-color: var(--light-blue-color);
     }
-
-
-
+    
+    
+    
+    .lineUnderAboutUsPageTitle{
+        width: 50px;
+        height: 2px;
+        color: var(--darker-blue-color)
+    }
     .aboutUsPageTitleCont{
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-image: url('https://img.freepik.com/free-photo/large-building-site_1127-3251.jpg?w=2000'); 
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
         user-select:none ;
     }
 
     .aboutUsPageTitle {
-        backdrop-filter: blur(10px);
         display: flex;
         justify-content: center;
         text-align: center;
@@ -108,7 +126,6 @@ const AboutUsPageStyled = styled.div`
         font-weight: 600;
         color: var(--darker-blue-color);
         margin: 10px !important;
-        padding: .1em;
         border-radius: 50px;
     }
 

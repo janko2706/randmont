@@ -19,14 +19,14 @@ function Footer() {
         </div>
         <div className="footer-bottom">
             <p>copyright &copy;2022 <a href="/">Rand Mont</a>  </p>
-                    <div className="footer-menu">
+                    {/* <div className="footer-menu">
                         <ul className="f-menu">
                             <li><a href="/">Home</a></li>
                             <li><a href="/about">About</a></li>
                             <li><a href="/contact">Contact</a></li>
                             <li><a href="/services">Services</a></li>
                         </ul>
-                    </div>
+                    </div> */}
         </div>
 
     </footer>

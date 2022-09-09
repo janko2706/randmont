@@ -28,7 +28,7 @@ const KolicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
                 <div className='staraStolarijaOption'>
                     <input type='radio' value='20-10' id='20-10' name='kolicinaProzora' onChange={handleChange('kolicinaProzora')} />
                         <label htmlFor='20-10'>
-                            <div style={{fontSize: '3rem'}}> 20-10</div>
+                            <div style={{fontSize: '3rem'}}> 10-20</div>
                         </label>
                 </div>
                 <div className='staraStolarijaOption'>
