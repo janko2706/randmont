@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Facebook, Whatsapp, Instagram } from 'react-bootstrap-icons';
+import { NavLink } from 'react-router-dom';
 
 
 function Footer() {
@@ -10,23 +11,14 @@ function Footer() {
         <div className="footer-content">
             <h3>Rand Mont</h3>
             <p>We are here to bring all the brightness you will ever need.</p>
-            {/* //TODO  add social media links*/}
             <ul className="socials">
-                <li><a href="/contact"><Facebook/></a></li>
-                <li><a href="/contact"><Whatsapp/></a></li>
-                <li><a href="/contact"><Instagram/></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100076529737042"><Facebook/></a></li>
+                <li><NavLink to="/contact"><Whatsapp/></NavLink></li>
+                <li><a href="https://www.instagram.com/rand_mont_official"><Instagram/></a></li>
             </ul>
         </div>
         <div className="footer-bottom">
             <p>copyright &copy;2022 <a href="/">Rand Mont</a>  </p>
-                    {/* <div className="footer-menu">
-                        <ul className="f-menu">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/services">Services</a></li>
-                        </ul>
-                    </div> */}
         </div>
 
     </footer>

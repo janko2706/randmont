@@ -8,6 +8,7 @@ import aboutUsImage from '../images/RandMontCrew.jpg';
 import { NavLink } from 'react-router-dom';
 import Impressions from '../components/Impressions';
 
+
 function HomePage() {
 
     const { scrollY } = useScroll();
@@ -16,10 +17,6 @@ function HomePage() {
 
     return (
         <motion.div
-            // initial={{y: -200}}
-            // animate={{x: 0}}
-            //exit={{y: -200}}
-            // transition={{ type: "spring", stiffness: 100 }}
             style={{display: 'grid', overflowX: 'hidden'}}
         >
             <HomePageStyled>

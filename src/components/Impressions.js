@@ -16,7 +16,6 @@ function Impressions() {
                         <div className="pt-3 text-uppercase name">
                             Robert Garral
                         </div>
-                        <div className="designation">Home owner</div>
                     </div>
                     <div className="face back-face">
                         <span className="fas fa-quote-left"></span>
@@ -35,7 +34,6 @@ function Impressions() {
                         <div className="pt-3 text-uppercase name">
                             Jeffery Kennan
                         </div>
-                        <div className="designation">Building manager</div>
                     </div>
                     <div className="face back-face">
                         <span className="fas fa-quote-left"></span>
@@ -54,7 +52,6 @@ function Impressions() {
                         <div className="pt-3 text-uppercase name">
                             Issac Maxwell
                         </div>
-                        <div className="designation">Finance Director</div>
                     </div>
                     <div className="face back-face">
                         <span className="fas fa-quote-left"></span>

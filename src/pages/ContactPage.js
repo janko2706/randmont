@@ -28,13 +28,11 @@ function ContactPage() {
           <li><i className="fa fa-flag"></i>  Munchen, Zagreb</li>
           <li><i className="fa fa-road"></i>  Perkovceva 62, Samobor 10430, Croatia</li>
           <li><i className="fa fa-phone"></i>  Croatian number: +385-99767-5454</li>
+          <li><i className="fa fa-phone"></i>  Croatian number: +385-99-343-4523</li>
           <li><i className="fa fa-phone"></i>  German number: +49-17792-77896</li>
           <li><i className="fa fa-envelope"></i>  info@randmont.com</li>
         </ul>
       </div>
-      {/* <!-- End .company-info --> */}
-
-      {/* <!-- CONTACT FORM --> */}
       <div className="contact">
         <h3>E-mail Us</h3>
 
@@ -70,14 +68,10 @@ function ContactPage() {
           </p>
 
         </form>
-        {/* <!-- End #contact-form --> */}
       </div>
-      {/* <!-- End .contact --> */}
 
     </div>
-    {/* <!-- End .wrapper --> */}
   </div>
-  {/* <!-- End .container --> */}
         
     </ContactPageStyled>
   )
