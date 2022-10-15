@@ -35,7 +35,7 @@ const VelicinaProzora = ({ previousStep, nextStep, handleChange, values }) => {
                         </label>
                 </div>
                 <div className='stepsBtnCont'>
-                    <input onClick={ Previous } className='btn-75' value='prev' type='button'/>
+                    {previousStep && <input onClick={ Previous } className='btn-75' value='prev' type='button'/>}
                     <input onClick={ Continue } className='btn-75' value='next' type='button'/>
                 </div>
             </form>

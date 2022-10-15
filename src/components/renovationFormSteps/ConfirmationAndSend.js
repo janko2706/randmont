@@ -1,23 +1,26 @@
 import React, { useRef } from 'react';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
+import { useNavigate } from 'react-router-dom';
 // import emailjs from '@emailjs/browser';
 
 const ConsfirmationAndSend = ({ previousStep, values }) => {
-
+    const navigate = useNavigate();
     const form = useRef();
 
     const sendEmail = (e) => {
+        e.preventDefault();
         alert('Thank you for reaching out to us, we will get back to you as soon as possible.')
-        console.log('success');
         //TODO make the form send the correct data
         // e.preventDefault();
 
-        // emailjs.sendForm('service_m95ylw8', 'template_jbuvfx8', form.current, 'x_calcMnm30KLUlCI')
-        //     .then((result) => {
-        //         console.log(result.text);
-        //     }, (error) => {
-        //         console.log(error.text);
-        //     });
+        emailjs.sendForm('service_m95ylw8', 'template_jbuvfx8', form.current, 'x_calcMnm30KLUlCI')
+            .then((result) => {
+                console.log(result.text);
+                navigate("/")
+            }, (error) => {
+                console.log(error.text);
+            });
     };
     const Previous = e => {
         e.preventDefault();
@@ -34,10 +37,6 @@ const ConsfirmationAndSend = ({ previousStep, values }) => {
                 <div className="company-info">
                     <ul>
                     <li>Your choices will be forwarded in the email.</li>
-                    {/* <li>Perkovceva 62, Samobor 10430, Croatia</li>
-                    <li>Croatian number: +385-99767-5454</li>
-                    <li>German number: +49-17792-77896</li>
-                    <li>info@randmont.com</li> */}
                     </ul>
                 </div>
                 {/* <!-- End .company-info --> */}
@@ -64,6 +63,16 @@ const ConsfirmationAndSend = ({ previousStep, values }) => {
                         <p>
                             <label>Phone Number</label>
                             <input type="text" name="phone_number" id="phone_number"/>
+                        </p>
+                        <p className='d-none'>
+                            <input type="text" name="kolicina_prozora" id="kolicina_prozora" defaultValue={values.kolicinaProzora}/>
+                            <input type="text" name="nova_stolarija" id="nova_stolarija" defaultValue={values.novaStolarija}/>
+                            <input type="text" name="rolete" id="rolete" defaultValue={values.rolete}/>
+                            <input type="text" name="stara_stolarija" id="stara_stolarija" defaultValue={values.staraStolarija}/>
+                            <input type="text" name="tip_usluge" id="tip_usluge" defaultValue={values.tipUsluge}/>
+                            <input type="text" name="ulazna_vrata" id="ulazna_vrata" defaultValue={values.ulaznaVrata}/>
+                            <input type="text" name="velicina_prozora" id="velicina_prozora" defaultValue={values.velicinaProzora}/>
+                            <input type="text" name="vrsta_posjeda" id="vrsta_posjeda" defaultValue={values.vrstaPosjeda}/>
                         </p>
 
                         <p className="full">

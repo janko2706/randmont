@@ -20,14 +20,14 @@ function ServicesPage() {
                                 <div className="shadow"></div>
                                 <div className="card-title"> New Construction </div>
                                 <div className="card-subtitle">
-                                    <p> 
+                                    <> 
                                         <small className="text-white pb-5">Let's Make Your Dream Home A Reality.</small> 
                                         <ul>
                                             <li> On-Site Consultations</li>
                                             <li> Preconstruction Mesurmants</li>
                                             <li> Installation</li>
                                         </ul>
-                                    </p>
+                                    </>
                                 </div>
                                 <NavLink to='/newconstructionform' className="btn btn-primary">Free estimate</NavLink>
                             </div>
@@ -38,14 +38,14 @@ function ServicesPage() {
                             <div className="card-body"> <img className="img" src={renovationImage} alt='renovation'/>
                                 <div className="card-title"> Renovation </div>
                                 <div className="card-subtitle">
-                                    <p> 
+                                    <> 
                                         <small className="text-white pb-5"> Let's Give Your Home A Fresh Look. </small>  
                                         <ul>
                                             <li> On-Site Consultations</li>
                                             <li> Preconstruction Mesurmants</li>
                                             <li> Restauiration</li>
                                         </ul>
-                                    </p>
+                                    </>
                                 </div>
                                 <NavLink to='/renovationform' className="btn btn-primary">Free estimate</NavLink>
                             </div>
@@ -56,14 +56,14 @@ function ServicesPage() {
                             <div className="card-body"> <img className="img rck" src={bigProjectsImage} alt='Big Projects' />
                                 <div className="card-title"> Big Projects </div>
                                 <div className="card-subtitle">
-                                    <p> 
+                                    <> 
                                         <small className="pb-5 text-white">Even When It Comes To Big Projects, We Put Our Heart And Soul In Every Scheme.</small> 
                                         <ul>
                                             <li> Meeting</li>
                                             <li> Project planning</li>
                                             <li> Assembling</li>
                                         </ul>
-                                    </p>
+                                    </>
                                 </div>
                                 <NavLink to='/contact' className="btn btn-primary">Contact</NavLink>
                             </div>

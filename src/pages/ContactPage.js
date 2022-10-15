@@ -1,9 +1,13 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
+import { useNavigate } from 'react-router-dom'
+
 
 function ContactPage() {
   const form = useRef();
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -11,7 +15,10 @@ function ContactPage() {
     emailjs.sendForm('service_m95ylw8', 'template_jbuvfx8', form.current, 'x_calcMnm30KLUlCI')
       .then((result) => {
           console.log(result.text);
+          setError(false)
+          navigate('/')
       }, (error) => {
+          setError(true)
           console.log(error.text);
       });
   };
@@ -62,6 +69,7 @@ function ContactPage() {
             <label>Message</label>
             <textarea name="message" rows="5" id="message" required></textarea>
           </p>
+          {error !== '' && <div className='text-danger'>Please try again, or try a different contact method.</div>}
 
           <p className="full">
             <button type="submit">Submit</button>

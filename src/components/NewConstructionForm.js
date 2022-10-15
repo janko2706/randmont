@@ -55,7 +55,6 @@ export default class NewConstructionForm extends Component {
                     <NovaStolarija
                         nextStep={ this.nextStep }
                         handleChange={ this.handleChange }
-                        previousStep={this.prevStep}
                         values={values}
                     />
                 )
