@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import slikaGradilista from '../images/gradilisteRandMont.jpg';
 import slikaRenovacije from '../images/renovacijaRandMont.jpg';
 import slikaVelikeZgrade from '../images/bussinesBuildingRandMont.jpg';
+import { NavLink } from 'react-router-dom';
 
 function GlassCard() {
     return (
@@ -16,7 +17,7 @@ function GlassCard() {
                     <div className="content">
                     <h2>Renovation</h2>
                     <p>Let's Give Your Home A Fresh Look.</p>
-                    <a href="/services">Get a free estimate</a>
+                    <NavLink to="/services">Get a free estimate</NavLink>
                     </div>
                 </div>
                 <div className="box">
@@ -24,7 +25,7 @@ function GlassCard() {
                     <div className="content">
                     <h2>New Construction</h2>
                     <p>Let's Make Your Dream Home A Reality.</p>
-                    <a href="/services">Get a free estimate</a>
+                    <NavLink to="/services">Get a free estimate</NavLink>
                     </div>
                 </div>
                 <div className="box">
@@ -33,7 +34,7 @@ function GlassCard() {
                     <h2>Big Projects</h2>
                     <p>Even When It Comes To Big Projects,</p>
                     <p>We Put Our Heart And Soul In Every Scheme.</p>
-                    <a href="/contact">Give us a call</a>
+                    <NavLink to="/contact">Give us a call</NavLink>
                     </div>
                 </div>
             </div>

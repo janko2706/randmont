@@ -18,7 +18,7 @@ function Footer() {
             </ul>
         </div>
         <div className="footer-bottom">
-            <p>copyright &copy;2022 <a href="/">Rand Mont</a>  </p>
+            <p>copyright &copy;2022 <NavLink to={"/"}>Rand Mont</NavLink>  </p>
         </div>
 
     </footer>
